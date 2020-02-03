@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-out=$(python ../main.py)
+out=$(python ../../main.py)
 exit_status=$?
 if [ $exit_status -eq 1 ]; then
   echo '{"id": "python-unit-test", "output": "${out}", "score": -1}'
