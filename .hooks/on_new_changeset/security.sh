@@ -13,7 +13,7 @@ out="${out#\"}"
 out=$(echo "$out" | base64)
 
 if [ $exit_status -eq 1 ]; then
-  echo "{\"id\": \"python-security\", \"output\": \"${out}\", \"score\": -1}"
+  echo "{\"id\": \"python-security\", \"output\": \"base64:${out}\", \"score\": -1}"
 else
-  echo "{\"id\": \"python-security\", \"output\": \"${out}\", \"score\": 1}"
+  echo "{\"id\": \"python-security\", \"output\": \"base64:${out}\", \"score\": 1}"
 fi
